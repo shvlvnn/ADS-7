@@ -12,7 +12,7 @@ class TPQueue {
         ITEM *prev;
     };
  
- public:
+  public:
   T pop();
   void push(const T& value);
   TPQueue():hd(nullptr), tl(nullptr) {}
