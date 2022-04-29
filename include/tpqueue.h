@@ -38,13 +38,13 @@ void TPQueue<T>::push(const T& value) {
   ITEM *item = create(value);
   while (tmp && tmp->value.prior >= value.prior)
   tmp = tmp->nxt;
-  if (!tmp && hd) {  /*в конец*/
+  if (!tmp && hd) {
       tl->nxt = item;
       tl->nxt->prev = tl;
       tl = item;
-  } else if (!tmp && !hd) { /*в пустой*/
+  } else if (!tmp && !hd) {
       hd = tl = item;
-  } else if (!tmp->prev) { /*в начало*/
+  } else if (!tmp->prev) {
       tmp->prev = item;
       item->nxt = tmp;
       hd = item;
