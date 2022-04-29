@@ -11,6 +11,7 @@ class TPQueue {
         ITEM *nxt;
         ITEM *prev;
     };
+ 
  public:
   T pop();
   void push(const T& value);
@@ -19,6 +20,7 @@ class TPQueue {
       while (hd)
       pop();
   }
+ 
  private:
     TPQueue::ITEM *create(const T& value) {
         ITEM *item = new ITEM;
